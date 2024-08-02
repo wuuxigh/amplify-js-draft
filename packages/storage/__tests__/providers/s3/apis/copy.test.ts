@@ -351,10 +351,10 @@ describe('copy API', () => {
 				const mockDate = 'mock-date' as any;
 				await copyWrapper({
 					source: {
-						path: 'sourceKey',
+						path: 'sourcePath',
 						notModifiedSince: mockDate,
 					},
-					destination: { path: 'destinationKey' },
+					destination: { path: 'destinationPath' },
 				});
 				expect(copyObject).toHaveBeenCalledTimes(1);
 				expect(copyObject).toHaveBeenCalledWith(
@@ -369,10 +369,10 @@ describe('copy API', () => {
 				const mockEtag = 'mock-etag';
 				await copyWrapper({
 					source: {
-						path: 'sourceKey',
+						path: 'sourcePath',
 						eTag: mockEtag,
 					},
-					destination: { path: 'destinationKey' },
+					destination: { path: 'destinationPath' },
 				});
 				expect(copyObject).toHaveBeenCalledTimes(1);
 				expect(copyObject).toHaveBeenCalledWith(
